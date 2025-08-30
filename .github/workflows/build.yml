@@ -92,7 +92,7 @@ jobs:
         cd build && ninja
     - uses: actions/upload-artifact@v4
       with:
-        name: aseprite
+        name: aseprite-${{ matrix.os }}-${{ matrix.build_type }}-${{ matrix.scripting }}-${{ github.run_number }}
         path: |
           D:/a/aseprite/aseprite/build/bin/data
           D:/a/aseprite/aseprite/build/bin/aseprite.exe
